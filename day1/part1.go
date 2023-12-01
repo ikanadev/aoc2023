@@ -3,14 +3,13 @@ package day1
 import (
 	"bufio"
 	"bytes"
-	"fmt"
 	"io/ioutil"
 
 	"github.com/jqvk/aoc2023/common"
 )
 
-func readInput() []string {
-	content, err := ioutil.ReadFile("day1/input")
+func readInput(path string) []string {
+	content, err := ioutil.ReadFile(path)
 	common.ErrPanic(err)
 	scanner := bufio.NewScanner(bytes.NewReader(content))
 	var lines []string
@@ -46,12 +45,13 @@ func getLineSum(line string) int {
 	return first * 10 + last
 }
 
-func Part1() {
-	content := readInput()
+func Part1() int {
+	// content := readInput("day1/input_small")
+	content := readInput("day1/input")
 	total := 0
 	for _, line := range content {
 		sum := getLineSum(line)
 		total += sum
 	}
-  fmt.Println("D1P1:", total)
+  return total
 }
