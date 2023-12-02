@@ -17,6 +17,9 @@ type Set struct {
 func (s *Set) isSubSet(pool Set) bool {
 	return s.Red <= pool.Red && s.Green <= pool.Green && s.Blue <= pool.Blue
 }
+func (s *Set) getPower() int {
+	return s.Red * s.Green * s.Blue
+}
 
 type Game struct {
 	ID   int
@@ -30,6 +33,22 @@ func (g *Game) canPlay(pool Set) bool {
 		}
 	}
 	return true
+}
+
+func (g *Game) getMinimumSet() Set {
+	var result Set
+	for _, set := range g.Sets {
+		if set.Red > result.Red {
+			result.Red = set.Red
+		}
+		if set.Green > result.Green {
+			result.Green = set.Green
+		}
+		if set.Blue > result.Blue {
+			result.Blue = set.Blue
+		}
+	}
+	return result
 }
 
 func parseGame(line string) Game {
@@ -65,6 +84,7 @@ func parseGame(line string) Game {
 }
 
 func parseData() []Game {
+	// lines := common.ReadFile("day2/input_small")
 	lines := common.ReadFile("day2/input")
 	games := make([]Game, len(lines))
 	for i, line := range lines {
@@ -82,5 +102,5 @@ func Part1() int {
 			idSum += game.ID
 		}
 	}
-  return idSum
+	return idSum
 }
