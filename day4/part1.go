@@ -13,6 +13,7 @@ type Set struct {
 	winners     []int
 	cards       []int
 	winnerCards int
+	instances   int
 }
 
 func (s *Set) calculateWinnerCards() {
@@ -34,6 +35,7 @@ func parseInput() []Set {
 	var sets []Set
 	for _, line := range lines {
 		var set Set
+		set.instances = 1
 		split := strings.Split(line, ":")
 		setSplit := strings.Fields(split[0])
 		cardsSplit := strings.Split(split[1], "|")
@@ -60,7 +62,7 @@ func parseInput() []Set {
 func Part1() int {
 	sets := parseInput()
 	totalPoints := 0
-	for i, _ := range sets {
+	for i := range sets {
 		sets[i].calculateWinnerCards()
 		if sets[i].winnerCards > 0 {
 			totalPoints += int(math.Pow(2, float64(sets[i].winnerCards-1)))
