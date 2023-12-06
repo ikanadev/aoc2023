@@ -10,7 +10,7 @@ import (
 type RangeMap struct {
 	inputStart  int
 	outputStart int
-	lenght      int
+	length      int
 }
 type Mapper struct {
 	name string
@@ -22,7 +22,7 @@ func (m *Mapper) mapSeeds(seeds []int) []int {
 	for i, seed := range seeds {
 		seedAdded := false
 		for _, rm := range m.maps {
-			if seed >= rm.inputStart && seed <= (rm.inputStart+rm.lenght-1) {
+			if seed >= rm.inputStart && seed <= (rm.inputStart+rm.length-1) {
 				newSeeds[i] = rm.outputStart + (seed - rm.inputStart)
 				seedAdded = true
 			}
@@ -49,7 +49,7 @@ func parseMapper(lines []string) Mapper {
 		var rangeMap RangeMap
 		rangeMap.outputStart = numbers[0]
 		rangeMap.inputStart = numbers[1]
-		rangeMap.lenght = numbers[2]
+		rangeMap.length = numbers[2]
 		mapper.maps = append(mapper.maps, rangeMap)
 	}
 	return mapper
