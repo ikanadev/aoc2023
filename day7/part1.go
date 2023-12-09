@@ -31,6 +31,13 @@ T55J5 684
 KK677 28
 KTJJT 220
 QQQJA 483
+
+23456 2345J
+A23A4 A23A4
+23432
+TTT98
+23332
+AA8AA
 [{32T3K 1 765} {T55J5 3 684} {KK677 2 28} {KTJJT 2 220} {QQQJA 3 483}]
    Five of a kind, where all five cards have the same label: AAAAA
    Four of a kind, where four cards have the same label and one card has a different label: AA8AA
