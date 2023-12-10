@@ -19,7 +19,7 @@ func measureAndPrint[T any](label string, fn func() T) {
 	res := fn()
 	endTime := time.Now()
 	elapsed := endTime.Sub(startTime)
-	fmt.Printf("%s: %v\t\t(%v)\n", label, res, elapsed)
+	fmt.Printf("%s: %-15v\t(%v)\n", label, res, elapsed)
 }
 
 func main() {
