@@ -17,6 +17,7 @@ func (s *Serie) isAllZero() bool {
 	}
 	return true
 }
+
 func (s *Serie) calculateNextValue() int {
 	matrix := make([]Serie, 0)
 	matrix = append(matrix, *s)
@@ -57,5 +58,5 @@ func Part1() int {
 	for _, serie := range series {
 		total += serie.calculateNextValue()
 	}
-  return total
+	return total
 }
