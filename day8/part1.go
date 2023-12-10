@@ -26,6 +26,10 @@ func (m *Map) nextInstruction() Dir {
 	return Right
 }
 
+func (m *Map) restarInstructions() {
+	m.insIndex = -1
+}
+
 func parseInput(lines []string) Map {
 	var m Map
 	m.instructions = lines[0]
