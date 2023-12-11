@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/jqvk/aoc2023/day1"
+	"github.com/jqvk/aoc2023/day10"
 	"github.com/jqvk/aoc2023/day2"
 	"github.com/jqvk/aoc2023/day3"
 	"github.com/jqvk/aoc2023/day4"
@@ -42,4 +43,5 @@ func main() {
 	measureAndPrint("D8P2", day8.Part2)
 	measureAndPrint("D9P1", day9.Part1)
 	measureAndPrint("D9P2", day9.Part2)
+	measureAndPrint("D10P1", day10.Part1)
 }
