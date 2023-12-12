@@ -1,4 +1,4 @@
-package day6
+package day06
 
 import (
 	"strconv"
@@ -46,8 +46,8 @@ func parseInput(lines []string) []Race {
 }
 
 func Part1() int {
-	// lines := common.ReadFile("day6/input_small")
-	lines := common.ReadFile("day6/input")
+	// lines := common.ReadFile("day06/input_small")
+	lines := common.ReadFile("day06/input")
 	races := parseInput(lines)
   result := 1
 	for _, race := range races {

@@ -1,4 +1,4 @@
-package day2
+package day02
 
 import (
 	"strconv"
@@ -84,8 +84,8 @@ func parseGame(line string) Game {
 }
 
 func parseData() []Game {
-	// lines := common.ReadFile("day2/input_small")
-	lines := common.ReadFile("day2/input")
+	// lines := common.ReadFile("day02/input_small")
+	lines := common.ReadFile("day02/input")
 	games := make([]Game, len(lines))
 	for i, line := range lines {
 		games[i] = parseGame(line)

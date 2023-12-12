@@ -1,4 +1,4 @@
-package day1
+package day01
 
 import (
 	"bufio"
@@ -46,8 +46,8 @@ func getLineSum(line string) int {
 }
 
 func Part1() int {
-	// content := readInput("day1/input_small")
-	content := readInput("day1/input")
+	// content := readInput("day01/input_small")
+	content := readInput("day01/input")
 	total := 0
 	for _, line := range content {
 		sum := getLineSum(line)

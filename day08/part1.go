@@ -1,4 +1,4 @@
-package day8
+package day08
 
 import "github.com/jqvk/aoc2023/common"
 
@@ -49,7 +49,7 @@ func parseInput(lines []string) Map {
 }
 
 func Part1() int {
-	lines := common.ReadFile("day8/input")
+	lines := common.ReadFile("day08/input")
 	m := parseInput(lines)
 	m.position = "AAA"
 

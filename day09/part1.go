@@ -1,4 +1,4 @@
-package day9
+package day09
 
 import (
 	"strconv"
@@ -52,7 +52,7 @@ func parseInput(lines []string) []Serie {
 }
 
 func Part1() int {
-	lines := common.ReadFile("day9/input")
+	lines := common.ReadFile("day09/input")
 	series := parseInput(lines)
 	total := 0
 	for _, serie := range series {

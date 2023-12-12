@@ -1,4 +1,4 @@
-package day7
+package day07
 
 import (
 	"sort"
@@ -116,8 +116,8 @@ func parseInput(lines []string) []Hand {
 }
 
 func Part1() int {
-	// lines := common.ReadFile("day7/input_small")
-	lines := common.ReadFile("day7/input")
+	// lines := common.ReadFile("day07/input_small")
+	lines := common.ReadFile("day07/input")
 	hands := parseInput(lines)
 	sort.Slice(hands, func(i, j int) bool {
 		if hands[i].kind == hands[j].kind {

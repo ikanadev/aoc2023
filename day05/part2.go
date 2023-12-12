@@ -1,4 +1,4 @@
-package day5
+package day05
 
 import (
 	"strconv"
@@ -28,8 +28,8 @@ func parseRangeSeeds(line string) []int {
 }
 
 func Part2() int {
-	lines := common.ReadFile("day5/input_small")
-	// lines := common.ReadFile("day5/input")
+	lines := common.ReadFile("day05/input_small")
+	// lines := common.ReadFile("day05/input")
 	seeds := parseRangeSeeds(lines[0])
 	mappers := parseMappers(lines[2:])
 	for _, mapper := range mappers {

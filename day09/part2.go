@@ -1,4 +1,4 @@
-package day9
+package day09
 
 import "github.com/jqvk/aoc2023/common"
 
@@ -21,8 +21,8 @@ func (s *Serie) calculatePrevValue() int {
 }
 
 func Part2() int {
-	// lines := common.ReadFile("day9/input_small")
-	lines := common.ReadFile("day9/input")
+	// lines := common.ReadFile("day09/input_small")
+	lines := common.ReadFile("day09/input")
 	series := parseInput(lines)
 	total := 0
 	for _, serie := range series {

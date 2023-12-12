@@ -1,4 +1,4 @@
-package day8
+package day08
 
 import "github.com/jqvk/aoc2023/common"
 
@@ -34,7 +34,7 @@ func listLcm(numbers []int) int {
 }
 
 func Part2() int {
-	lines := common.ReadFile("day8/input")
+	lines := common.ReadFile("day08/input")
 	m := parseInput(lines)
 	list := make([]string, 0)
 	for s := range m.mapDirs {

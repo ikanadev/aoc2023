@@ -1,4 +1,4 @@
-package day6
+package day06
 
 import (
 	"strconv"
@@ -21,7 +21,7 @@ func parseRace(lines []string) Race {
 }
 
 func Part2() int {
-	lines := common.ReadFile("day6/input")
+	lines := common.ReadFile("day06/input")
   race := parseRace(lines)
   ways := race.getWaysToBreakRecord()
   return ways

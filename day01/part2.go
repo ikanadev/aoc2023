@@ -1,4 +1,4 @@
-package day1
+package day01
 
 import "strings"
 
@@ -60,8 +60,8 @@ func getLineSumWithStrings(line string) int {
 }
 
 func Part2() int {
-	// content := readInput("day1/input_small2")
-	content := readInput("day1/input")
+	// content := readInput("day01/input_small2")
+	content := readInput("day01/input")
 	total := 0
 	for _, line := range content {
 		sum := getLineSumWithStrings(line)

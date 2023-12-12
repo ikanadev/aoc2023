@@ -1,4 +1,4 @@
-package day3
+package day03
 
 import (
 	"strconv"
@@ -13,8 +13,8 @@ type Coord struct {
 }
 
 func parseInput() [][]rune {
-	// lines := common.ReadFile("day3/input_small")
-	lines := common.ReadFile("day3/input")
+	// lines := common.ReadFile("day03/input_small")
+	lines := common.ReadFile("day03/input")
 	var matrix [][]rune
 	for _, line := range lines {
 		var row []rune

@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jqvk/aoc2023/day1"
+	"github.com/jqvk/aoc2023/day01"
+	"github.com/jqvk/aoc2023/day02"
+	"github.com/jqvk/aoc2023/day03"
+	"github.com/jqvk/aoc2023/day04"
+	"github.com/jqvk/aoc2023/day05"
+	"github.com/jqvk/aoc2023/day06"
+	"github.com/jqvk/aoc2023/day07"
+	"github.com/jqvk/aoc2023/day08"
+	"github.com/jqvk/aoc2023/day09"
 	"github.com/jqvk/aoc2023/day10"
-	"github.com/jqvk/aoc2023/day2"
-	"github.com/jqvk/aoc2023/day3"
-	"github.com/jqvk/aoc2023/day4"
-	"github.com/jqvk/aoc2023/day5"
-	"github.com/jqvk/aoc2023/day6"
-	"github.com/jqvk/aoc2023/day7"
-	"github.com/jqvk/aoc2023/day8"
-	"github.com/jqvk/aoc2023/day9"
 )
 
 func measureAndPrint[T any](label string, fn func() T) {
@@ -25,24 +25,24 @@ func measureAndPrint[T any](label string, fn func() T) {
 }
 
 func main() {
-	measureAndPrint("D1P1", day1.Part1)
-	measureAndPrint("D1P2", day1.Part2)
-	measureAndPrint("D2P1", day2.Part1)
-	measureAndPrint("D2P2", day2.Part2)
-	measureAndPrint("D3P1", day3.Part1)
-	measureAndPrint("D3P2", day3.Part2)
-	measureAndPrint("D4P1", day4.Part1)
-	measureAndPrint("D4P2", day4.Part2)
-	measureAndPrint("D5P1", day5.Part1)
-	measureAndPrint("D5P2", day5.Part2)
-	measureAndPrint("D6P1", day6.Part1)
-	measureAndPrint("D6P2", day6.Part2)
-	measureAndPrint("D7P1", day7.Part1)
-	measureAndPrint("D7P2", day7.Part2)
-	measureAndPrint("D8P1", day8.Part1)
-	measureAndPrint("D8P2", day8.Part2)
-	measureAndPrint("D9P1", day9.Part1)
-	measureAndPrint("D9P2", day9.Part2)
+	measureAndPrint("D01P1", day01.Part1)
+	measureAndPrint("D01P2", day01.Part2)
+	measureAndPrint("D02P1", day02.Part1)
+	measureAndPrint("D02P2", day02.Part2)
+	measureAndPrint("D03P1", day03.Part1)
+	measureAndPrint("D03P2", day03.Part2)
+	measureAndPrint("D04P1", day04.Part1)
+	measureAndPrint("D04P2", day04.Part2)
+	measureAndPrint("D05P1", day05.Part1)
+	measureAndPrint("D05P2", day05.Part2)
+	measureAndPrint("D06P1", day06.Part1)
+	measureAndPrint("D06P2", day06.Part2)
+	measureAndPrint("D07P1", day07.Part1)
+	measureAndPrint("D07P2", day07.Part2)
+	measureAndPrint("D08P1", day08.Part1)
+	measureAndPrint("D08P2", day08.Part2)
+	measureAndPrint("D09P1", day09.Part1)
+	measureAndPrint("D09P2", day09.Part2)
 	measureAndPrint("D10P1", day10.Part1)
 	measureAndPrint("D10P2", day10.Part2)
 }

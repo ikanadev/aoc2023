@@ -1,4 +1,4 @@
-package day7
+package day07
 
 import (
 	"sort"
@@ -91,9 +91,9 @@ func (h *Hand) calculateKindWithJokers() {
 }
 
 func Part2() int {
-	// lines := common.ReadFile("day7/input_small")
-	lines := common.ReadFile("day7/input")
-	// lines := common.ReadFile("day7/input_extra")
+	// lines := common.ReadFile("day07/input_small")
+	lines := common.ReadFile("day07/input")
+	// lines := common.ReadFile("day07/input_extra")
 	hands := parseInput(lines)
 	for i := range hands {
 		hands[i].calculateKindWithJokers()

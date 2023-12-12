@@ -1,4 +1,4 @@
-package day4
+package day04
 
 import (
 	"math"
@@ -30,8 +30,8 @@ func (s *Set) calculateWinnerCards() {
 }
 
 func parseInput() []Set {
-	// lines := common.ReadFile("day4/input_small")
-	lines := common.ReadFile("day4/input")
+	// lines := common.ReadFile("day04/input_small")
+	lines := common.ReadFile("day04/input")
 	var sets []Set
 	for _, line := range lines {
 		var set Set
