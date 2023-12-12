@@ -15,6 +15,5 @@ func Part2() int {
 			sum += g1.distance(g2) + universe.emptySpaces(g1, g2)*emtpySpaceValue
 		}
 	}
-	println(sum)
 	return sum
 }
