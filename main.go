@@ -44,4 +44,5 @@ func main() {
 	measureAndPrint("D9P1", day9.Part1)
 	measureAndPrint("D9P2", day9.Part2)
 	measureAndPrint("D10P1", day10.Part1)
+	measureAndPrint("D10P2", day10.Part2)
 }
