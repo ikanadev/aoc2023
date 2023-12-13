@@ -15,6 +15,7 @@ import (
 	"github.com/jqvk/aoc2023/day09"
 	"github.com/jqvk/aoc2023/day10"
 	"github.com/jqvk/aoc2023/day11"
+	"github.com/jqvk/aoc2023/day12"
 )
 
 func measureAndPrint[T any](label string, fn func() T) {
@@ -48,4 +49,5 @@ func main() {
 	measureAndPrint("D10P2", day10.Part2)
 	measureAndPrint("D11P1", day11.Part1)
 	measureAndPrint("D11P2", day11.Part2)
+	measureAndPrint("D12P1", day12.Part1)
 }
