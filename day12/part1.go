@@ -1,9 +1,11 @@
 package day12
 
 import (
+	"fmt"
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/jqvk/aoc2023/common"
 )
@@ -43,6 +45,10 @@ func generateCombinations(prefix string, length, remainingDamaged int, result *[
 	generateCombinations(prefix+OPERATIONAL, length-1, remainingDamaged, result)
 }
 
+var cache map[int]map[int][]string = make(map[int]map[int][]string)
+var genDuration time.Duration = 0
+var countDuration time.Duration = 0
+
 type Condition struct {
 	record     string
 	damageList []int
@@ -60,26 +66,35 @@ func (c *Condition) possibleCombinations() []string {
 	damaged := c.missingDamaged()
 	missing := strings.Count(c.record, "?")
 	var result []string
+	missingMap, ok := cache[missing]
+	if !ok {
+		cache[missing] = make(map[int][]string)
+	}
+	if damagedCache, ok := missingMap[damaged]; ok {
+		return damagedCache
+	}
 	generateCombinations("", missing, damaged, &result)
+	cache[missing][damaged] = result
 	return result
 }
 
 func (c *Condition) countCombinations() int {
+	start := time.Now()
 	combs := c.possibleCombinations()
+	genDuration += time.Since(start)
+
+	start = time.Now()
 	re := regexp.MustCompile(`\?`)
-	var combinations []string
-	for i := range combs {
-		comb := []rune(combs[i])
+	combinations := make([]string, len(combs))
+	for i, comb := range combs {
+		combIdx := -1
 		newStr := re.ReplaceAllStringFunc(c.record, func(match string) string {
-			if len(comb) > 0 {
-				char := comb[0]
-				comb = comb[1:]
-				return string(char)
-			}
-			return match
+			combIdx++
+			return string(comb[combIdx])
 		})
-		combinations = append(combinations, newStr)
+		combinations[i] = newStr
 	}
+	countDuration += time.Since(start)
 	var valid []string
 	for _, comb := range combinations {
 		split := strings.Fields(strings.ReplaceAll(comb, OPERATIONAL, " "))
@@ -106,5 +121,7 @@ func Part1() int {
 	for _, c := range conds {
 		total += c.countCombinations()
 	}
+	fmt.Println("Generating:", genDuration)
+	fmt.Println("Counting:", countDuration)
 	return total
 }
