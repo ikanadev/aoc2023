@@ -20,7 +20,7 @@ import (
 )
 
 func measureAndPrint[T any](label string, fn func() T) {
-  return
+	// return
 	startTime := time.Now()
 	res := fn()
 	endTime := time.Now()
@@ -52,5 +52,5 @@ func main() {
 	measureAndPrint("D11P1", day11.Part1)
 	measureAndPrint("D11P2", day11.Part2)
 	measureAndPrint("D12P1", day12.Part1)
-  day13.Part1()
+	measureAndPrint("D13P1", day13.Part1)
 }
